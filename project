@@ -1,0 +1,13 @@
+# List all the schematics to be netlisted and laid out on the pc board
+schematics	mppogo.sch
+
+# for an output-name of foo, gsch2pcb generates files foo.net, foo.pcb,
+# and foo.new.pcb.  if there is no output name specified, the file names
+# are derived from the first listed schematic...
+output-name	mppogo
+
+elements-dir packages
+elements-dir /usr/share/pcb
+
+# stick to newlib elements, don't use the older/odder m4 stuff
+skip-m4

@@ -1,0 +1,11 @@
+load "footprint.5c"
+import Footprint;
+
+int	drill = 200;
+int	copper = 7;
+
+element_start(sprintf ("hole-%d", drill));
+
+pin_mil(0, 0, drill, copper, "1", "1");
+
+element_end();

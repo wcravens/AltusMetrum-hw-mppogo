@@ -1,0 +1,2 @@
+; empty the library path and populate it with only our own symbols
+(component-library "./symbols")

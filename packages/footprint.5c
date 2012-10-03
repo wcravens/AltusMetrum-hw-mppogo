@@ -1,0 +1,165 @@
+/*
+ * Copyright © 2012 Keith Packard <keithp@keithp.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
+ */
+
+namespace Footprint {
+
+	/* process clearance requirement */
+	public real clearance_mm = 0.6;
+	public real clearance_mil = 25;
+
+	public int mm2mils100(real mm) = floor (mm / 25.4 * 1000 * 100 + 0.5);
+
+	public int mils2mils100(real mils) = floor (mils * 100 + 0.5);
+
+	public void element_start(string name) {
+		printf ("# author: Keith Packard\n");
+		printf ("# email: keithp@keithp.com\n");
+		printf ("# dist-license: GPL 2\n");
+		printf ("# use-license: unlimited\n");
+		printf ("Element [\"\" \"%s\" \"\" \"\" 0 0 0 0 0 100 \"\"]\n",
+			name);
+		printf ("(\n");
+		
+	}
+
+	public void element_end() {
+		printf (")\n");
+	}
+	
+	public void pad_mm(real center_x,
+			   real center_y,
+			   real width,
+			   real height,
+			   string name,
+			   string num)
+	{
+		real	x1 = 0;
+		real	y1 = 0;
+		real	x2 = 0;
+		real	y2 = 0;
+		real 	thickness = 0;
+
+		if (width > height) {
+			thickness = height;
+			y1 = center_y;
+			x1 = center_x - (width - height) / 2;
+			y2 = center_y;
+			x2 = center_x + (width - height) / 2;
+		} else {
+			thickness = width;
+			x1 = center_x;
+			y1 = center_y - (height - width) / 2;
+			x2 = center_x;
+			y2 = center_y + (height - width) / 2;
+		}
+
+		real mask = thickness + clearance_mm / 2;
+
+		printf ("    Pad[");
+		printf (" %6d %6d %6d %6d",
+			mm2mils100(x1),
+			mm2mils100(y1),
+			mm2mils100(x2),
+			mm2mils100(y2));
+		printf (" %6d %6d %6d",
+			mm2mils100(thickness),
+			mm2mils100(clearance_mm),
+			mm2mils100(mask));
+		printf (" \"%s\" \"%s\" \"square\"]\n",
+			name, num);
+	}
+
+	public void pin_mm(real x, real y, real drill, real copper,
+			string name,
+			string number)
+	{
+		real thickness = drill + copper * 2;
+		real mask = thickness + clearance_mm / 2;
+		printf("    Pin[");
+		printf(" %6d %6d",
+		       mm2mils100(x),
+		       mm2mils100(y));
+		printf(" %6d %6d %6d %6d",
+		       mm2mils100(thickness),
+		       mm2mils100(clearance_mm),
+		       mm2mils100(mask),
+		       mm2mils100(drill));
+		printf (" \"%s\" \"%s\"",
+			name, number);
+		printf (" \"\"]\n");
+		       
+	}
+
+	public void pin_mil(real x, real y, real drill, real copper,
+			string name,
+			string number)
+	{
+		real thickness = drill + copper * 2;
+		real mask = thickness + clearance_mil / 2;
+		printf("    Pin[");
+		printf(" %6d %6d",
+		       mils2mils100(x),
+		       mils2mils100(y));
+		printf(" %6d %6d %6d %6d",
+		       mils2mils100(thickness),
+		       mils2mils100(clearance_mil),
+		       mils2mils100(mask),
+		       mils2mils100(drill));
+		printf (" \"%s\" \"%s\"",
+			name, number);
+		printf (" \"\"]\n");
+		       
+	}
+
+	public void line_mm (real x1, real y1, real x2, real y2)
+	{
+		printf ("    ElementLine[");
+		printf (" %6d %6d %6d %6d",
+			mm2mils100(x1),
+			mm2mils100(y1),
+			mm2mils100(x2),
+			mm2mils100(y2));
+		printf (" 1000]\n");
+	}
+
+	public void line_mil (real x1, real y1, real x2, real y2)
+	{
+		printf ("    ElementLine[");
+		printf (" %6d %6d %6d %6d",
+			mils2mils100(x1),
+			mils2mils100(y1),
+			mils2mils100(x2),
+			mils2mils100(y2));
+		printf (" 1000]\n");
+	}
+
+	public void rect_mm (real x, real y, real w, real h)
+	{
+		line_mm(x,y,x+w,y);
+		line_mm(x+w,y,x+w,y+h);
+		line_mm(x+w,y+h,x,y+h);
+		line_mm(x,y+h,x,y);
+	}
+
+	public void rect_mil (real x, real y, real w, real h)
+	{
+		line_mil(x,y,x+w,y);
+		line_mil(x+w,y,x+w,y+h);
+		line_mil(x+w,y+h,x,y+h);
+		line_mil(x,y+h,x,y);
+	}
+}

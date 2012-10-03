@@ -1,0 +1,29 @@
+load "footprint.5c"
+import Footprint;
+
+int	rows = 3;
+int	cols = 2;
+
+int	spacing_x = 100;
+int	spacing_y = 100;
+
+real x(real c) = spacing_x * (c - (cols - 1) / 2);
+real y(real r) = spacing_y * (r - (rows - 1) / 2);
+
+int n(int c, int r) = r * cols + c + 1;
+
+int	drill = 38;
+int	copper = 16;
+
+element_start(sprintf ("header-%d-%d", rows, cols));
+
+for (int r = 0; r < rows; r++)
+	for (int c = 0; c < cols; c++)
+		pin_mil(x(c), y(r), drill, copper,
+			sprintf("%d", n(c, r)),
+			sprintf("%d", n(c, r)));
+			
+
+rect_mil(x(-.5), y(-.5), spacing_x * cols, spacing_y * rows);
+
+element_end();
