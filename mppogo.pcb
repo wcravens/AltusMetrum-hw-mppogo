@@ -6,7 +6,7 @@ FileVersion[20091103]
 PCB["MPPogo" 1300.00mil 1160.00mil]
 
 Grid[1000.000000 0.0000 0.0000 0]
-Cursor[0.0000 130.00mil 0.000000]
+Cursor[0.0000 0.0000 0.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[5.00mil 10.00mil 5.00mil 5.00mil 15.00mil 6.50mil]
@@ -932,6 +932,10 @@ Layer(2 "solder")
 )
 Layer(3 "outline")
 (
+	Line[0.0000 0.0000 1300.00mil 0.0000 10.00mil 20.00mil "clearline"]
+	Line[1300.00mil 0.0000 1300.00mil 1160.00mil 10.00mil 20.00mil "clearline"]
+	Line[1300.00mil 1160.00mil 0.0000 1160.00mil 10.00mil 20.00mil "clearline"]
+	Line[0.0000 1160.00mil 0.0000 0.0000 10.00mil 20.00mil "clearline"]
 )
 Layer(4 "silk")
 (
