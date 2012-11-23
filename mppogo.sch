@@ -122,22 +122,22 @@ refdes=H3
 T 47800 48200 5 10 0 0 0 0 1
 footprint=hole-200
 }
-C 47800 43200 1 0 0 hole-1.sym
+C 47800 45700 1 0 0 hole-1.sym
 {
-T 47800 43200 5 10 0 1 0 0 1
+T 47800 45700 5 10 0 1 0 0 1
 device=HOLE
-T 48000 43800 5 10 1 1 0 4 1
+T 48000 46300 5 10 1 1 0 4 1
 refdes=H4
-T 47800 43200 5 10 0 0 0 0 1
+T 47800 45700 5 10 0 0 0 0 1
 footprint=hole-200
 }
-C 42300 43200 1 0 0 hole-1.sym
+C 42300 45700 1 0 0 hole-1.sym
 {
-T 42300 43200 5 10 0 1 0 0 1
+T 42300 45700 5 10 0 1 0 0 1
 device=HOLE
-T 42500 43800 5 10 1 1 0 4 1
+T 42500 46300 5 10 1 1 0 4 1
 refdes=H2
-T 42300 43200 5 10 0 0 0 0 1
+T 42300 45700 5 10 0 0 0 0 1
 footprint=hole-200
 }
 C 41800 49200 1 0 0 hole-1.sym
@@ -158,22 +158,22 @@ refdes=H7
 T 48800 49200 5 10 0 0 0 0 1
 footprint=hole-M3
 }
-C 48800 42200 1 0 0 hole-1.sym
+C 48800 44700 1 0 0 hole-1.sym
 {
-T 48800 42200 5 10 0 1 0 0 1
+T 48800 44700 5 10 0 1 0 0 1
 device=HOLE
-T 49000 42800 5 10 1 1 0 4 1
+T 49000 45300 5 10 1 1 0 4 1
 refdes=H8
-T 48800 42200 5 10 0 0 0 0 1
+T 48800 44700 5 10 0 0 0 0 1
 footprint=hole-M3
 }
-C 41300 42200 1 0 0 hole-1.sym
+C 41300 44700 1 0 0 hole-1.sym
 {
-T 41300 42200 5 10 0 1 0 0 1
+T 41300 44700 5 10 0 1 0 0 1
 device=HOLE
-T 41500 42800 5 10 1 1 0 4 1
+T 41500 45300 5 10 1 1 0 4 1
 refdes=H6
-T 41300 42200 5 10 0 0 0 0 1
+T 41300 44700 5 10 0 0 0 0 1
 footprint=hole-M3
 }
 C 41800 48800 1 0 0 nc-bottom-1.sym
@@ -183,11 +183,11 @@ value=NoConnection
 T 41800 49800 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 42300 47850 1 0 0 nc-bottom-1.sym
+C 42300 47800 1 0 0 nc-bottom-1.sym
 {
-T 42300 48450 5 10 0 0 0 0 1
+T 42300 48400 5 10 0 0 0 0 1
 value=NoConnection
-T 42300 48850 5 10 0 0 0 0 1
+T 42300 48800 5 10 0 0 0 0 1
 device=DRC_Directive
 }
 C 47800 47800 1 0 0 nc-bottom-1.sym
@@ -204,48 +204,115 @@ value=NoConnection
 T 48800 49800 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 48800 41800 1 0 0 nc-bottom-1.sym
+C 48800 44300 1 0 0 nc-bottom-1.sym
 {
-T 48800 42400 5 10 0 0 0 0 1
+T 48800 44900 5 10 0 0 0 0 1
 value=NoConnection
-T 48800 42800 5 10 0 0 0 0 1
+T 48800 45300 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 47800 42800 1 0 0 nc-bottom-1.sym
+C 47800 45300 1 0 0 nc-bottom-1.sym
 {
-T 47800 43400 5 10 0 0 0 0 1
+T 47800 45900 5 10 0 0 0 0 1
 value=NoConnection
-T 47800 43800 5 10 0 0 0 0 1
+T 47800 46300 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 42300 42800 1 0 0 nc-bottom-1.sym
+C 42300 45300 1 0 0 nc-bottom-1.sym
 {
-T 42300 43400 5 10 0 0 0 0 1
+T 42300 45900 5 10 0 0 0 0 1
 value=NoConnection
-T 42300 43800 5 10 0 0 0 0 1
+T 42300 46300 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 41300 41800 1 0 0 nc-bottom-1.sym
+C 41300 44300 1 0 0 nc-bottom-1.sym
 {
-T 41300 42400 5 10 0 0 0 0 1
+T 41300 44900 5 10 0 0 0 0 1
 value=NoConnection
-T 41300 42800 5 10 0 0 0 0 1
+T 41300 45300 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 49850 45400 1 0 1 connector2-1.sym
+C 42700 41200 1 0 1 miniUSB.sym
 {
-T 49650 46400 5 10 0 0 0 6 1
-device=CONNECTOR_2
-T 49550 46200 5 10 1 1 0 6 1
+T 42405 43600 5 10 1 1 0 6 1
 refdes=J2
-T 49850 45400 5 10 0 0 0 0 1
-footprint=100mil2pin
+T 42345 41595 5 10 0 1 0 6 1
+footprint=usbcable
 }
-N 46500 46500 46500 46250 4
-N 46500 46250 48000 46250 4
-N 48000 46250 48000 45900 4
-N 48000 45900 48150 45900 4
-N 46500 44500 46500 44250 4
-N 46500 44250 48000 44250 4
-N 48000 44250 48000 45600 4
-N 48000 45600 48150 45600 4
+C 44000 42500 1 0 0 LC78Lxx.sym
+{
+T 44295 43495 5 10 1 1 0 0 1
+refdes=U1
+T 44895 43495 5 10 1 1 0 0 1
+value=L78Lxx
+T 43995 42495 5 10 0 1 0 0 1
+device=IC
+T 44895 43495 5 10 0 1 0 0 1
+footprint=TO92
+}
+C 43700 42300 1 90 0 capacitor-1.sym
+{
+T 43000 42500 5 10 0 0 90 0 1
+device=CAPACITOR
+T 43600 42900 5 10 1 1 0 0 1
+refdes=C1
+T 42800 42500 5 10 0 0 90 0 1
+symversion=0.1
+T 43600 42500 5 10 1 1 0 0 1
+value=0.33uF
+T 43700 42300 5 10 0 1 0 0 1
+footprint=CK05_type_Capacitor
+T 43700 42300 5 10 0 1 0 0 1
+loadstatus=throughhole
+T 43700 42300 5 10 0 1 0 0 1
+vendor=digikey
+}
+C 46700 42300 1 90 0 capacitor-1.sym
+{
+T 46000 42500 5 10 0 0 90 0 1
+device=CAPACITOR
+T 46600 42900 5 10 1 1 0 0 1
+refdes=C2
+T 45800 42500 5 10 0 0 90 0 1
+symversion=0.1
+T 46700 42300 5 10 0 1 0 0 1
+vendor=digikey
+T 46700 42300 5 10 0 1 0 0 1
+loadstatus=throughhole
+T 46600 42500 5 10 1 1 0 0 1
+value=0.1uF
+T 46700 42300 5 10 0 1 0 0 1
+footprint=CK05_type_Capacitor
+}
+N 42700 43200 44000 43200 4
+N 46000 43200 47000 43200 4
+{
+T 46500 43300 5 10 1 1 0 0 1
+netname=+3.3V
+}
+C 42600 41300 1 0 0 gnd-1.sym
+N 43500 42300 46500 42300 4
+N 45000 42500 45000 42300 4
+C 44900 42000 1 0 0 gnd-1.sym
+C 42700 42700 1 0 0 nc-right-1.sym
+{
+T 42800 43200 5 10 0 0 0 0 1
+value=NoConnection
+T 42800 43400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 42700 42300 1 0 0 nc-right-1.sym
+{
+T 42800 42800 5 10 0 0 0 0 1
+value=NoConnection
+T 42800 43000 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 42700 41900 1 0 0 nc-right-1.sym
+{
+T 42800 42400 5 10 0 0 0 0 1
+value=NoConnection
+T 42800 42600 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 46075 44200 1 0 0 gnd-1.sym
