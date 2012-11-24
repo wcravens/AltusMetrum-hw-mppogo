@@ -8,6 +8,12 @@ T 44100 46500 5 10 1 1 0 0 1
 refdes=J1
 T 43500 45200 5 10 0 0 0 0 1
 footprint=header-6-2
+T 43500 45200 5 10 0 0 0 0 1
+vendor=digikey
+T 43500 45200 5 10 0 0 0 0 1
+vendor_part_number=A26593-ND
+T 43500 45200 5 10 0 0 0 0 1
+loadstatus=throughhole
 }
 C 47400 47100 1 180 0 terminal-1.sym
 {
@@ -249,6 +255,12 @@ T 43995 42495 5 10 0 1 0 0 1
 device=IC
 T 44895 43495 5 10 0 1 0 0 1
 footprint=TO92
+T 44000 42500 5 10 0 0 0 0 1
+vendor=digikey
+T 44000 42500 5 10 0 0 0 0 1
+vendor_part_number=497-7288-ND
+T 44000 42500 5 10 0 0 0 0 1
+loadstatus=throughhole
 }
 C 43700 42300 1 90 0 capacitor-1.sym
 {
@@ -266,6 +278,8 @@ T 43700 42300 5 10 0 1 0 0 1
 loadstatus=throughhole
 T 43700 42300 5 10 0 1 0 0 1
 vendor=digikey
+T 43700 42300 5 10 0 0 0 0 1
+vendor_part_number=445-8609-ND
 }
 C 46700 42300 1 90 0 capacitor-1.sym
 {
@@ -283,6 +297,8 @@ T 46600 42500 5 10 1 1 0 0 1
 value=0.1uF
 T 46700 42300 5 10 0 1 0 0 1
 footprint=CK05_type_Capacitor
+T 46700 42300 5 10 0 0 0 0 1
+vendor_part_number=445-8618-ND
 }
 N 42700 43200 44000 43200 4
 N 46000 43200 47000 43200 4
